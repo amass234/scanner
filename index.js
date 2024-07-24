@@ -227,7 +227,15 @@ async function scanV2(url) {
     url = "http://" + url;
   const browser = await puppeteer.launch({
     headless: false,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--disable-gpu",
+    ],
     executablePath: "/usr/bin/chromium-browser",
   });
   const page = await browser.newPage();

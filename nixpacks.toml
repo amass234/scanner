@@ -21,3 +21,13 @@ apt_pkgs = [
   "libu2f-udev",
   "chromium-browser"
 ]
+
+[phases.build]
+commands = [
+  "npm install"
+]
+
+[phases.start]
+commands = [
+  "node index.js"
+]
