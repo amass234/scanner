@@ -20,13 +20,3 @@ apt_pkgs = [
   "xdg-utils",
   "libu2f-udev"
 ]
-
-[phases.build]
-commands = [
-  "npm install"
-]
-
-[phases.start]
-commands = [
-  "node cookie_scanner.js"
-]
