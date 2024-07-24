@@ -26,8 +26,3 @@ apt_pkgs = [
 commands = [
   "npm install"
 ]
-
-[phases.start]
-commands = [
-  "node index.js"
-]
