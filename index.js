@@ -1,4 +1,4 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
 const express = require("express");
 const app = express();
 const csv = require("csv-parser");
@@ -227,15 +227,7 @@ async function scanV2(url) {
     url = "http://" + url;
   const browser = await puppeteer.launch({
     headless: false,
-    args: [
-      "--disable-gpu",
-      "--disable-dev-shm-usage",
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--no-first-run",
-      "--no-zygote",
-      "--single-process",
-    ],
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });

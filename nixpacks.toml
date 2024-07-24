@@ -1,0 +1,32 @@
+[phases.setup]
+apt_pkgs = [
+  "gconf-service",
+  "libasound2",
+  "libatk1.0-0",
+  "libcups2",
+  "libdbus-1-3",
+  "libgdk-pixbuf2.0-0",
+  "libnspr4",
+  "libxcomposite1",
+  "libxdamage1",
+  "libxrandr2",
+  "libgbm-dev",
+  "libgtk-3-0",
+  "libnss3",
+  "libxss1",
+  "libxtst6",
+  "fonts-liberation",
+  "libappindicator1",
+  "xdg-utils",
+  "libu2f-udev"
+]
+
+[phases.build]
+commands = [
+  "npm install"
+]
+
+[phases.start]
+commands = [
+  "node cookie_scanner.js"
+]
