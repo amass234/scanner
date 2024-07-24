@@ -18,5 +18,6 @@ apt_pkgs = [
   "fonts-liberation",
   "libappindicator1",
   "xdg-utils",
-  "libu2f-udev"
+  "libu2f-udev",
+  "chromium-browser"
 ]
